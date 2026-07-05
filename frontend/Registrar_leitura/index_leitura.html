@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HidroGestor - Nova Leitura</title>
+  <script src="script_leitura.js" defer></script>
+  <link rel="stylesheet" href="style_leitura.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <button class="btn-menu" onclick="window.location.href='../Pagina_principal/index_principal.html'">Página Principal</button>
+        <div class="user-info">
+          <button class="btn-sair" onclick="sair()">Sair</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="form-section">
+        <h2>Registrar Leitura</h2>
+        <p>Informe os dados da leitura de consumo</p>
+
+        <form id="form-leitura">
+
+          <label for="nr_mes">Mês da Leitura</label>
+          <select name="cars" id="nr_mes" form="carform" required>
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+
+          </select>
+
+          <label for="qt_consumo">Quantidade Consumida (m³)</label>
+          <input type="number" id="qt_consumo" name="qt_consumo" step="0.01" min="0" required />
+
+          <label for="nr_unidadeconsumidora">Unidade Consumidora</label>
+          <input type="text" id="nr_unidadeconsumidora" name="nr_unidadeconsumidora" required />
+
+          <button type="submit" class="btn-enviar" onclick="registrar_leitura()">Registrar</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; HidroGestor</p>
+    </div>
+  </footer>
+
+  <script>
+    function sair() {
+      window.location.href = '../Pagina_inicial/index_inicial.html';
+    }
+
+  </script>
+</body>
+
+</html>
